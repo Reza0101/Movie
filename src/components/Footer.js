@@ -10,7 +10,7 @@ const Footer = () => {
 
                 <AiOutlineHeart className="text-red-500 text-[22px]" />
 
-                <p>By Fateme Ghafari</p>
+                <p>By Fateme Ghafari And Developt By Reza Siahi</p>
             </div>
         </div>
     );

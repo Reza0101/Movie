@@ -15,7 +15,7 @@ const BoxDropDown = ({ icon, img, title, children }) => {
         <div className="box-drop-dow">
             <Menu>
                 <MenuButton
-                    className="flex bg-stone-800"
+                    className="flex w-52 rounded-md p-3 bg-stone-800"
                     as={Button}
                     color="white"
                     _hover={{bg: 'rgba(255, 255, 255, 0.02'}}
@@ -27,16 +27,16 @@ const BoxDropDown = ({ icon, img, title, children }) => {
                         <p className="box">{title}</p>
                     </div>
                 </MenuButton>
-                <MenuList bg="#121212" px="5px" py="2px" border="none">
+                <MenuList className="w-52" bg="#121212" px="5px" py="2px" border="none">
                     {children.map((item) => (
                         <MenuItem
                             key={crypto.randomUUID()}
                             bg="rgba(255, 255, 255, 0.02)"
                             color="white"
-                            className="my-2 rounded-[8px] hover:border hover:border-red-800 duration-300 transition border-black"
+                            className="my-2 rounded-[8px] hover:border text-center hover:border-red-800 duration-300 transition border-black"
                             transition="all 0.2s"
                             minH="40px">
-                            <span>{item}</span>
+                            <p className="text-center w-full">{item}</p>
                         </MenuItem>
                     ))}
                 </MenuList>

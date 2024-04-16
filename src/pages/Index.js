@@ -133,7 +133,7 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <div className="drop-down-container  scroll-bar overflow-y-visible rounded-[8px] mt-10 mx-auto h-[80px] w-[95%] flex items-center justify-center">
+                    <div className="drop-down-container  scroll-bar overflow-y-visible rounded-[8px] mt-10 mx-auto h-[80px] w-full flex items-center justify-center">
                         <div className="flex gap-5 overflow-x-scroll md:overflow-x-hidden nemidonam md:justify-around w-full mx-5">
                             {dropDownList.map((item) => (
                                 <BoxDropDown key={crypto.randomUUID()} {...item} />
@@ -145,7 +145,7 @@ const Index = () => {
                         {listFilterMovie.map((item) => (
                             <p
                                 key={item.id}
-                                onClick={() => setItemActiveFilterMovie(item)}
+                                onClick={() => setItemActiveFilterMovie(item.text)}
                                 className={`active flex items-center justify-center cursor-pointer border-transparent hover:border hover:border-red-500 py-[5px] px-[24px] border rounded-[40px] text-center h-[34px] ${
                                     item.text === itemActiveFilterMovie
                                         ? "bg-red-500"
@@ -162,48 +162,6 @@ const Index = () => {
                     {/* Banner one */}
 
                     <div className="flex flex-col md:flex-row gap-5 md:gap-10">
-                         <div
-                            className="w-full relative md:w-2/3 z-10 rounded-[12px]  transition mx-auto h-[300px] bg-no-repeat bg-cover"
-                            style={{
-                                backgroundImage: `url(./images/recommend2.png)`,
-                            }}>
-                            <div className="w-full h-[300px] rounded-[12px] bg-black opacity-[0.3] sticky top-0 z-20"></div>
-                            <p className="m-3 absolute top-0 z-50 rounded-full w-fit  px-3 text-[12px]   py-[2px] text-white">
-                                <h1 className="text-xl">Oppenheimer</h1>
-                                <p>Jul 19, 2023</p>
-                            </p>
-                            <p className="absolute z-50 bottom-3 left-3 text-white w-[300px] text-sm opacity-[0.5]">
-                                The story of J. Robert Oppenheimer’s role in the
-                                development of the atomic bomb during World War
-                                II.
-                            </p>
-                            <img
-                                src="./images/play.png"
-                                className="absolute top-5 right-5 z-40"
-                                alt=""
-                            />
-                        </div>
-                        <div
-                            className=" relative z-10 md:w-1/3 bg-origin-border rounded-[12px] w-full transition mx-auto bg-center h-[300px] bg-no-repeat bg-cover"
-                            style={{
-                                backgroundImage: `url(./images/recommend6.png)`,
-                            }}>
-                            <div className="h-[300px] rounded-[12px] w-full bg-black opacity-[0.3] sticky top-0 z-20 "></div>
-                            <p className="m-3 absolute top-0 z-50 rounded-full w-fit  px-3 text-[12px]   py-[2px] text-white">
-                                Apr 13, 2023
-                            </p>
-                            <p className="absolute bottom-4 text-xl text-white left-4 z-50 w-[130px]">
-                                The Last Thing He Told Me
-                            </p>
-                            <img
-                                src="./images/play.png"
-                                className="absolute bottom-5 right-5 z-50"
-                                alt=""
-                            />
-                            <p className="absolute z-50 top-5 right-5">
-                                9 episodes
-                            </p>
-                        </div>{" "}
                         <img
                             src="./images/banner 1.png"
                             className="h-[200px] md:h-[300px] md:w-2/3"
