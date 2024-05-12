@@ -10,7 +10,7 @@ const Footer = () => {
 
                 <AiOutlineHeart className="text-red-500 text-[22px]" />
 
-                <p>By <a className="text-red-500" href="https://fatemeweb.vercel.app/en">Fateme Ghafari</a> And Developt By Reza Siahi</p>
+                <p>By <a className="text-red-500 font-bold" href="https://fatemeweb.vercel.app/en">Fateme Ghafari</a> And Developt By Reza Siahi</p>
             </div>
         </div>
     );
